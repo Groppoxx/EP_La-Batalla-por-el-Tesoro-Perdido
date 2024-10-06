@@ -1,0 +1,126 @@
+[gd_scene load_steps=23 format=3 uid="uid://dtn82rcd8s36b"]
+
+[ext_resource type="Texture2D" uid="uid://ccn36m1rv46cp" path="res://assets/Treasure Hunters/Crabby/04-Fall/Fall 01.png" id="1_7mpbt"]
+[ext_resource type="Script" path="res://scripts/players/player_2.gd" id="1_m2mqu"]
+[ext_resource type="Texture2D" uid="uid://dr1qxek4eu6hm" path="res://assets/Treasure Hunters/Crabby/01-Idle/Idle 01.png" id="1_ndq0r"]
+[ext_resource type="Texture2D" uid="uid://ck8i8ki0bvjx1" path="res://assets/Treasure Hunters/Crabby/01-Idle/Idle 02.png" id="2_uq2nq"]
+[ext_resource type="Texture2D" uid="uid://d0b7u2t5yp32m" path="res://assets/Treasure Hunters/Crabby/01-Idle/Idle 03.png" id="3_sk5op"]
+[ext_resource type="Texture2D" uid="uid://cthk0xwkx02kd" path="res://assets/Treasure Hunters/Crabby/01-Idle/Idle 04.png" id="4_40qn1"]
+[ext_resource type="Texture2D" uid="uid://b4j41l5603368" path="res://assets/Treasure Hunters/Crabby/01-Idle/Idle 05.png" id="5_fy50w"]
+[ext_resource type="Texture2D" uid="uid://cuk7eq6du7vw8" path="res://assets/Treasure Hunters/Crabby/01-Idle/Idle 06.png" id="6_hpwod"]
+[ext_resource type="Texture2D" uid="uid://cu07oq7v6j6j5" path="res://assets/Treasure Hunters/Crabby/01-Idle/Idle 07.png" id="7_2jx0i"]
+[ext_resource type="Texture2D" uid="uid://b3isyirkvx1br" path="res://assets/Treasure Hunters/Crabby/01-Idle/Idle 08.png" id="8_tmfdt"]
+[ext_resource type="Texture2D" uid="uid://cc0j8rrvjbk7l" path="res://assets/Treasure Hunters/Crabby/01-Idle/Idle 09.png" id="9_bx3hv"]
+[ext_resource type="Texture2D" uid="uid://cddpaco8nlnw6" path="res://assets/Treasure Hunters/Crabby/02-Run/Run 01.png" id="10_x05lv"]
+[ext_resource type="Texture2D" uid="uid://c7ar6a2jcd57r" path="res://assets/Treasure Hunters/Crabby/02-Run/Run 02.png" id="11_b4sqd"]
+[ext_resource type="Texture2D" uid="uid://35fn50gdnx8x" path="res://assets/Treasure Hunters/Crabby/03-Jump/Jump 01.png" id="11_vqtrt"]
+[ext_resource type="Texture2D" uid="uid://cgilln1g3hbf7" path="res://assets/Treasure Hunters/Crabby/03-Jump/Jump 02.png" id="12_4b44d"]
+[ext_resource type="Texture2D" uid="uid://cpyab5fi7ceb1" path="res://assets/Treasure Hunters/Crabby/02-Run/Run 03.png" id="12_7s2k0"]
+[ext_resource type="Texture2D" uid="uid://b3kgswjvx4la" path="res://assets/Treasure Hunters/Crabby/03-Jump/Jump 03.png" id="13_dnwsd"]
+[ext_resource type="Texture2D" uid="uid://dmi7vl58ot3te" path="res://assets/Treasure Hunters/Crabby/02-Run/Run 04.png" id="13_ntrjt"]
+[ext_resource type="Texture2D" uid="uid://cyk2er1j4e7xv" path="res://assets/Treasure Hunters/Crabby/02-Run/Run 05.png" id="14_r2sh6"]
+[ext_resource type="Texture2D" uid="uid://cipkam8v3ar3v" path="res://assets/Treasure Hunters/Crabby/02-Run/Run 06.png" id="15_aavc3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4hql5"]
+radius = 12.0
+height = 26.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4kggd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7mpbt")
+}],
+"loop": true,
+"name": &"Fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ndq0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_uq2nq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sk5op")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_40qn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fy50w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hpwod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2jx0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tmfdt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bx3hv")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_vqtrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4b44d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_dnwsd")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_x05lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_b4sqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7s2k0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ntrjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_r2sh6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_aavc3")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[node name="Player_2" type="CharacterBody2D" groups=["Player_2"]]
+script = ExtResource("1_m2mqu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("CapsuleShape2D_4hql5")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 0)
+scale = Vector2(1.32, 1.10756)
+shape = SubResource("CapsuleShape2D_4hql5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4kggd")
+animation = &"Fall"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

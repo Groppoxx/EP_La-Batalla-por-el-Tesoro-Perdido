@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxtjw4a5emjaa"]
+
+[ext_resource type="Script" path="res://scripts/backgrounds/background.gd" id="1_u1nb2"]
+[ext_resource type="Texture2D" uid="uid://x0rq4dt58o6g" path="res://assets/Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="1_xq4nw"]
+[ext_resource type="Texture2D" uid="uid://diron4vfr2epg" path="res://assets/Treasure Hunters/Palm Tree Island/Sprites/Background/Big Clouds.png" id="2_120ht"]
+[ext_resource type="Texture2D" uid="uid://bfcxopad2vb7l" path="res://assets/Treasure Hunters/Palm Tree Island/Sprites/Background/Water Reflect Big 01.png" id="3_lkqc2"]
+[ext_resource type="Texture2D" uid="uid://b02fx2bvytt7f" path="res://assets/Treasure Hunters/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Regular 01.png" id="4_ky2te"]
+
+[node name="Background" type="ParallaxBackground"]
+script = ExtResource("1_u1nb2")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1151, 0)
+
+[node name="BgImage" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(576.005, 323.995)
+scale = Vector2(3.00002, 5.06254)
+texture = ExtResource("1_xq4nw")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1151, 0)
+
+[node name="BigClouds" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(576, 292.5)
+scale = Vector2(2.57143, 3)
+texture = ExtResource("2_120ht")
+
+[node name="WaterReflectBig01" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(548, 477)
+scale = Vector2(2.27647, 6.7)
+texture = ExtResource("3_lkqc2")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1150, 0)
+
+[node name="BackPalmTreeRegular01" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(455, 444)
+scale = Vector2(3.04688, 3.21875)
+texture = ExtResource("4_ky2te")
+
+[node name="BackPalmTreeRegular02" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(165, 427)
+scale = Vector2(3.04688, 3.21875)
+texture = ExtResource("4_ky2te")
+
+[node name="BackPalmTreeRegular03" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(35, 475)
+scale = Vector2(3.04688, 3.21875)
+texture = ExtResource("4_ky2te")
+
+[node name="BackPalmTreeRegular04" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(591, 479)
+scale = Vector2(3.04688, 3.21875)
+texture = ExtResource("4_ky2te")
+
+[node name="BackPalmTreeRegular05" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(884, 444)
+scale = Vector2(3.04688, 3.21875)
+texture = ExtResource("4_ky2te")

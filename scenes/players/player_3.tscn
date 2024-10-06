@@ -1,0 +1,121 @@
+[gd_scene load_steps=22 format=3 uid="uid://dsbh308xrw45u"]
+
+[ext_resource type="Script" path="res://scripts/players/player_3.gd" id="1_6g6w2"]
+[ext_resource type="Texture2D" uid="uid://d3bm0yxdiucf8" path="res://assets/Treasure Hunters/Fierce Tooth/01-Idle/Idle 01.png" id="1_gnven"]
+[ext_resource type="Texture2D" uid="uid://bk6uihicnasr0" path="res://assets/Treasure Hunters/Fierce Tooth/04-Fall/Fall 01.png" id="1_n2can"]
+[ext_resource type="Texture2D" uid="uid://cg2snr7ms0xn8" path="res://assets/Treasure Hunters/Fierce Tooth/01-Idle/Idle 02.png" id="2_g4e7y"]
+[ext_resource type="Texture2D" uid="uid://dbff0fohitb67" path="res://assets/Treasure Hunters/Fierce Tooth/01-Idle/Idle 03.png" id="3_11jwd"]
+[ext_resource type="Texture2D" uid="uid://bslj1ulto6wrn" path="res://assets/Treasure Hunters/Fierce Tooth/01-Idle/Idle 04.png" id="4_bbvy3"]
+[ext_resource type="Texture2D" uid="uid://umge2qap4nqf" path="res://assets/Treasure Hunters/Fierce Tooth/01-Idle/Idle 05.png" id="5_rxdnx"]
+[ext_resource type="Texture2D" uid="uid://t3oiud8bt3sn" path="res://assets/Treasure Hunters/Fierce Tooth/01-Idle/Idle 06.png" id="6_cfrtg"]
+[ext_resource type="Texture2D" uid="uid://ceyw1abglxnr" path="res://assets/Treasure Hunters/Fierce Tooth/01-Idle/Idle 07.png" id="7_x0o8l"]
+[ext_resource type="Texture2D" uid="uid://b41kt3ne4y48k" path="res://assets/Treasure Hunters/Fierce Tooth/01-Idle/Idle 08.png" id="8_36p1f"]
+[ext_resource type="Texture2D" uid="uid://boc6126a2dg1y" path="res://assets/Treasure Hunters/Fierce Tooth/02-Run/Run 01.png" id="9_83i11"]
+[ext_resource type="Texture2D" uid="uid://o8x1cx3u8ug1" path="res://assets/Treasure Hunters/Fierce Tooth/03-Jump/Jump 01.png" id="10_1823o"]
+[ext_resource type="Texture2D" uid="uid://bepbdhqa1oq8a" path="res://assets/Treasure Hunters/Fierce Tooth/02-Run/Run 02.png" id="10_ilskl"]
+[ext_resource type="Texture2D" uid="uid://dsqij6487of0c" path="res://assets/Treasure Hunters/Fierce Tooth/03-Jump/Jump 02.png" id="11_5nt66"]
+[ext_resource type="Texture2D" uid="uid://cvqt868jqjn1x" path="res://assets/Treasure Hunters/Fierce Tooth/02-Run/Run 03.png" id="11_ll068"]
+[ext_resource type="Texture2D" uid="uid://jutnio2opai" path="res://assets/Treasure Hunters/Fierce Tooth/02-Run/Run 04.png" id="12_75ude"]
+[ext_resource type="Texture2D" uid="uid://bujmysrwt0jnh" path="res://assets/Treasure Hunters/Fierce Tooth/03-Jump/Jump 03.png" id="12_ryimd"]
+[ext_resource type="Texture2D" uid="uid://t11h5w1gd6dw" path="res://assets/Treasure Hunters/Fierce Tooth/02-Run/Run 05.png" id="13_l5gv1"]
+[ext_resource type="Texture2D" uid="uid://bn7bbhfirl1ri" path="res://assets/Treasure Hunters/Fierce Tooth/02-Run/Run 06.png" id="14_ccxo0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_evvjj"]
+height = 24.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rya3m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_n2can")
+}],
+"loop": true,
+"name": &"Fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gnven")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g4e7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_11jwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bbvy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rxdnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cfrtg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_x0o8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_36p1f")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_1823o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5nt66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ryimd")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_83i11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ilskl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ll068")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_75ude")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_l5gv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ccxo0")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[node name="Player_3" type="CharacterBody2D" groups=["Player_3"]]
+script = ExtResource("1_6g6w2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_evvjj")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 1)
+scale = Vector2(1.28, 1.08)
+shape = SubResource("CapsuleShape2D_evvjj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rya3m")
+animation = &"Fall"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

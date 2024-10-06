@@ -1,0 +1,123 @@
+[gd_scene load_steps=12 format=3 uid="uid://cstie34dkkbpx"]
+
+[ext_resource type="PackedScene" uid="uid://pasyrgopw5sm" path="res://scenes/players/player_1.tscn" id="1_mvfd4"]
+[ext_resource type="PackedScene" uid="uid://cxtjw4a5emjaa" path="res://scenes/backgrounds/background.tscn" id="1_t8h58"]
+[ext_resource type="PackedScene" uid="uid://dtn82rcd8s36b" path="res://scenes/players/player_2.tscn" id="2_5xgo6"]
+[ext_resource type="PackedScene" uid="uid://dsbh308xrw45u" path="res://scenes/players/player_3.tscn" id="3_r5kax"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iopig"]
+size = Vector2(1152, 172)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4orl3"]
+size = Vector2(1, 476)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lamha"]
+size = Vector2(124.375, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcqks"]
+size = Vector2(158.188, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ubjv"]
+size = Vector2(61.0938, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8eho"]
+size = Vector2(102.047, 79)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q16oi"]
+size = Vector2(163.047, 66)
+
+[node name="Level_1" type="Node2D"]
+
+[node name="Player_1" parent="." instance=ExtResource("1_mvfd4")]
+position = Vector2(14.8981, 341)
+
+[node name="Player_2" parent="." instance=ExtResource("2_5xgo6")]
+position = Vector2(531.547, 360)
+
+[node name="Player_3" parent="." instance=ExtResource("3_r5kax")]
+position = Vector2(1125.71, 360)
+
+[node name="Background" parent="." instance=ExtResource("1_t8h58")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(576, 562)
+shape = SubResource("RectangleShape2D_iopig")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.5, 238)
+shape = SubResource("RectangleShape2D_4orl3")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1151.5, 238)
+shape = SubResource("RectangleShape2D_4orl3")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(190, 456)
+shape = SubResource("RectangleShape2D_lamha")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(516.906, 456)
+shape = SubResource("RectangleShape2D_fcqks")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(531.547, 416)
+shape = SubResource("RectangleShape2D_1ubjv")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(775.977, 437.5)
+shape = SubResource("RectangleShape2D_f8eho")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1069.52, 443)
+shape = SubResource("RectangleShape2D_q16oi")
+
+[node name="Panels" type="Node" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Panels"]
+offset_top = 510.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.0352941, 0.0352941, 0.0352941, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Panels"]
+offset_top = 476.0
+offset_right = 1152.0
+offset_bottom = 510.0
+color = Color(0.25098, 0.466667, 0.411765, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Panels"]
+offset_left = 128.0
+offset_top = 436.0
+offset_right = 252.0
+offset_bottom = 476.0
+color = Color(0.317647, 0.333333, 0.388235, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Panels"]
+offset_left = 438.0
+offset_top = 436.0
+offset_right = 596.0
+offset_bottom = 476.0
+color = Color(0.317647, 0.333333, 0.388235, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Panels"]
+offset_left = 725.0
+offset_top = 398.0
+offset_right = 827.0
+offset_bottom = 476.0
+color = Color(0.317647, 0.333333, 0.388235, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="Panels"]
+offset_left = 988.0
+offset_top = 409.0
+offset_right = 1152.0
+offset_bottom = 476.0
+color = Color(0.317647, 0.333333, 0.388235, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Panels"]
+offset_left = 500.0
+offset_top = 396.0
+offset_right = 563.0
+offset_bottom = 436.0
+color = Color(0.317647, 0.333333, 0.388235, 1)
